@@ -11,7 +11,7 @@ Welcome to my personal portfolio website! This project showcases my skills, expe
 ## Technologies Used
 
 - **HTML** for structure
-- **CSS** for styling
+- **CSS** for Styling
 
 ## How to Run
 
