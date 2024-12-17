@@ -15,7 +15,7 @@ Welcome to my personal portfolio website! This project showcases my skills, expe
 
 ## How to Run
 
-1. Clone the repository
+1. Clone the Repo
    ```bash
    https://github.com/Taj-2005/OIBSIP/tree/main/Portfolio
    ```
