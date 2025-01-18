@@ -1,3 +1,6 @@
+html{
+	scroll-behavior: smooth;
+}
 body{
 	margin: 0;
 	padding:0;
@@ -44,7 +47,7 @@ canvas {
 	justify-content: space-evenly;
 	align-items: center;
 	height: 50px;
-	width:60%;
+	width:80%;
 	border:none;
 	border-radius: 30px;
 	transition: border 2s;
@@ -156,7 +159,7 @@ a {
 	margin: 2em 0;
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.proImages1{
+#proImages1{
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -165,33 +168,20 @@ a {
 	color: white;
 	text-align: center;
 	font-size:xx-large;
+	opacity: 80%;
 }
 .refer{
 	width: 40vw;
 	height: 25vw;
 	opacity: 80%;
-}
-.odd{
-	opacity: 80%;
 	transition:opacity 2s,transform 2s;
 }
-.odd:hover{
+.refer:hover{
 	opacity: 100%;
-	transform: translateX(2vw);
-	transition:opacity 2s,transform 2s;
+	transform: translateY(-2vw);
 	border:1px solid #06b6d4;
 	box-shadow: 1px 1px 100px 1px #06b6d4;
-}
-.even{
-	opacity: 80%;
-	transition:opacity 2s,transform 1s;
-}
-.even:hover{
-	opacity: 100%;
-	transform: translateX(-2vw);
-	transition:opacity 2s,transform 2s;
-	border:1px solid #06b6d4;
-	box-shadow: 1px 1px 100px 1px #06b6d4;
+
 }
 #homepage3{
 	display: flex;
@@ -291,6 +281,20 @@ footer:hover{
 	}
 	.description{
 		font-size: 1em;
+	}
+	#proImages1{
+		display: grid;
+		grid-template-columns:1fr;
+		grid-template-rows:auto;
+		font-size:large;
+	}
+	.refer{
+		width: 60vw;
+		height: 36vw;
+		opacity: 80%;
+	}	
+	.refer:hover{
+		transform: translateY(-5vw);
 	}
 	.skills{
 		font-size: 2em;
