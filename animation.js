@@ -168,7 +168,6 @@ function render() {
     var tailX = velocity.x * 2,
         tailY = velocity.y * 2;
 
-    // stroke() wont work on an invisible line
     if( Math.abs( tailX ) < 0.1 ) tailX = 0.5;
     if( Math.abs( tailY ) < 0.1 ) tailY = 0.5;
 
@@ -180,44 +179,4 @@ function render() {
 
 }
 
-function movePointer( x, y ) {
 
-  if( typeof pointerX === 'number' && typeof pointerY === 'number' ) {
-
-    let ox = x - pointerX,
-        oy = y - pointerY;
-
-    velocity.tx = velocity.tx + ( ox / 400*scale ) * ( touchInput ? 1 : -1 );
-    velocity.ty = velocity.ty + ( oy / 400*scale ) * ( touchInput ? 1 : -1 );
-
-  }
-
-  pointerX = x;
-  pointerY = y;
-
-}
-
-function onMouseMove( event ) {
-
-  touchInput = false;
-
-  movePointer( event.clientX, event.clientY );
-
-}
-
-function onTouchMove( event ) {
-
-  touchInput = true;
-
-  movePointer( event.touches[0].clientX, event.touches[0].clientY, true );
-
-  event.preventDefault();
-
-}
-
-function onMouseLeave() {
-
-  pointerX = null;
-  pointerY = null;
-
-}
