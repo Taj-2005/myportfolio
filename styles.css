@@ -162,10 +162,9 @@ a {
 	align-items: center;
 	grid-template-columns:  1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-}
-.referNames{
-	color:white;
-	font-size: 40px;
+	color: white;
+	text-align: center;
+	font-size:xx-large;
 }
 .refer{
 	width: 40vw;
