@@ -286,3 +286,12 @@ footer:hover{
   .stars a:hover {
     color: #fff;
   }
+
+  @media (max-width:768px){
+    .stars{
+        display: none;
+    }
+    .canvas{
+        display: none;
+    }
+  }
