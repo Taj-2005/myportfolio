@@ -291,7 +291,7 @@ footer:hover{
 	.refer{
 		width: 60vw;
 		height: 36vw;
-		opacity: 80%;
+		opacity: 100%;
 	}	
 	.refer:hover{
 		transform: translateY(-5vw);
