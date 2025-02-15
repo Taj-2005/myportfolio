@@ -7,66 +7,98 @@ body{
 .about{
     color: white;
     font-size: 80px;
-    opacity: 50%;
+    opacity: 90%;
     text-align: center;
 }
 .abbout{
+    display: block;
     color: white;
-    opacity: 80%;
     width: 350px;
-    height: 800px;
+    height: 600px;
     font-size: 30px;
     word-spacing: 5px;
-    margin-left: 1000px;
-    margin-top: 100px;
-    font-family: 'Roboto', sans-serif;
-    opacity: 50%;
+    font-family: 'Kanit', sans-serif;
+    opacity: 60%;
     text-align: center;
+    margin-top: 40px;
 }
 .profile{
-    position: absolute;
+    display: block;
+    position: relative;
     width:600px;
     height:600px;
-    margin-left: 200px;
-    margin-top: 80px;
+    border: 2px solid transparent;
 }
 .gap{
-    padding-top: 50px;
+    padding-top: 1px;
+}
+.main1{
+	display: flex;
+    position: relative;
+	justify-content: center;
+	padding-top: 50px;
+}
+a {
+	text-decoration: none;
+	color: white;
+	opacity: 70%;
 }
 .main-h{
-    word-spacing: 10px;
-    color:black;
-    background-color: white;
-    text-align: center;
+	display: flex;
+    position: fixed;
+	color:white;
+	background-color: black;
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 50px;
+	width:80%;
+	border:none;
+	border-radius: 30px;
+	transition: border 2s,box-shadow 1.5s;
+}
+.main-h a{
+	transition: font-size 1s;
+}
+.main-h a:hover{
+	color:grey;
+	font-size:20px;
+	transition: font-size 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal-text {
+    color: white;
+    opacity: 0;
+    animation: fadeIn 5s ease-out forwards;
+}
+
+.main-h:hover{
+	border:1px solid #06b6d4;
+	box-shadow: 1px 1px 100px 1px #06b6d4;
+	transition: border 2s,box-shadow 1.5s;
+}
+.profile:hover{
+    border: 1px solid #06b6d4;
+    box-shadow: 1px 1px 100px 1px #06b6d4;
+    transition: border 1s, box-shadow 1s;
+}
+.main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width:50%;
-    border:none;
-    border-radius: 30px;
-    margin-left: 400px;
-}
-.main-h a{
-    margin-right: 20px;
-    text-decoration: none;
-    color: grey;
-    opacity: 70%;
-}
-.main-h a:hover{
-    color:white;
-}
-.main-h:hover{
-    background-color: black;
-    color: white;
-    border:1px solid #06b6d4;
-    box-shadow: 1px 1px 100px 1px #06b6d4;
-    transition: background-color 2s,color 2s,border 2s,box-shadow,2s;
-}
-.profile:hover{
-    border:1px solid #06b6d4;
-    box-shadow: 1px 1px 100px 1px #06b6d4;
-    transition: border 1s,box-shadow 1s;
+    align-content: center;
+    gap: 10vw;
+    height: 100vh;
 }
 
 .stars {
@@ -75,7 +107,7 @@ body{
       radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
   }
   canvas {
-    position: relative;
+    position: absolute;
     justify-content: center;
     align-items: center;
     position: fixed;
