@@ -366,3 +366,27 @@ footer:hover{
 	}
 
   } */
+
+  canvas {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Moves canvas behind everything */
+}
+
+.main-h {
+    z-index: 2; /* Navbar stays on top */
+}
+
+.main {
+    position: relative;
+    z-index: 1; /* Ensures content (including form) is above the canvas */
+}
+
+/* Ensures form is interactable */
+.visme_d {
+    position: relative;
+    z-index: 2; /* Makes sure the form is on top */
+}
