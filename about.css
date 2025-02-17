@@ -1,126 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-body{
+
+body {
     margin: 0;
-    padding:0;
+    padding: 0;
     background-color: black;
+    overflow-x: hidden;
 }
-.about{
+
+/* Full Screen Stars Background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1; /* Keeps stars behind everything */
+    overflow: hidden;
+}
+
+/* Canvas for stars */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Keeps the canvas behind all content */
+}
+
+/* About Section */
+.about {
     color: white;
-    font-size: 80px;
+    font-size: 5vw; /* Scales with viewport */
     opacity: 90%;
     text-align: center;
 }
-.abbout{
-    display: block;
+
+.main-h:hover {
+    border: 1px solid #06b6d4;
+    box-shadow: 1px 1px 100px 1px #06b6d4;
+    transition: border 2s, box-shadow 1.5s;
+}
+
+.abbout {
     color: white;
-    width: 350px;
-    height: 600px;
-    font-size: 30px;
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    font-size: 2vw;
     word-spacing: 5px;
     font-family: 'Kanit', sans-serif;
     opacity: 60%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
-.profile{
-    display: block;
-    position: relative;
-    width:600px;
-    height:600px;
+
+/* Profile Image */
+.profile {
+    width: 40vw;
+    height: auto;
     border: 2px solid transparent;
-}
-.gap{
-    padding-top: 1px;
-}
-.main1{
-	display: flex;
-    position: relative;
-	justify-content: center;
-	padding-top: 50px;
-}
-a {
-	text-decoration: none;
-	color: white;
-	opacity: 70%;
-}
-.main-h{
-	display: flex;
-    position: fixed;
-	color:white;
-	background-color: black;
-	text-align: center;
-	justify-content: space-evenly;
-	align-items: center;
-	height: 50px;
-	width:80%;
-	border:none;
-	border-radius: 30px;
-	transition: border 2s,box-shadow 1.5s;
-}
-.main-h a{
-	transition: font-size 1s;
-}
-.main-h a:hover{
-	color:grey;
-	font-size:20px;
-	transition: font-size 0.5s;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    border-radius: 10px;
 }
 
-.reveal-text {
-    color: white;
-    opacity: 0;
-    animation: fadeIn 5s ease-out forwards;
-}
-
-.main-h:hover{
-	border:1px solid #06b6d4;
-	box-shadow: 1px 1px 100px 1px #06b6d4;
-	transition: border 2s,box-shadow 1.5s;
-}
-.profile:hover{
-    border: 1px solid #06b6d4;
-    box-shadow: 1px 1px 100px 1px #06b6d4;
-    transition: border 1s, box-shadow 1s;
-}
-.main{
+/* NAVBAR: Always on top */
+.main1 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 10vw;
-    height: 100vh;
+    padding-top: 6vh;
 }
 
-.stars {
-    background-color: #000;
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent)
-  }
-  canvas {
-    position: absolute;
+.main-h {
+    display: flex;
+    position: fixed;
+    color: white;
+    background-color: black;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    transition: border 2s, box-shadow 1.5s;
+    z-index: 2; /* Navbar is now above canvas */
+}
+
+.main-h a {
+    margin: 5px 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    opacity: 70%;
+    transition: font-size 0.5s;
+}
+
+.main-h a:hover {
+    color: grey;
+    font-size: 1.4rem;
+}
+
+/* Content Layout */
+.main {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    height: calc(100vh - 50px);
-  }
-  
-  .stars a {
-    bottom: 2vmin;
-    right: 2vmin;
-    text-decoration: none;
-  }
-  
-  .stars a:hover {
-    color: #fff;
-  }
+    gap: 5vw;
+    height: 100vh;
+    padding: 10vh 5vw;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Content is above canvas */
+}
+
+/* Keep Navbar Fixed for Mobile */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+        padding: 10vh 5vw;
+    }
+
+    .profile {
+        width: 60vw;
+    }
+
+    .abbout {
+        width: 90%;
+        font-size: 4vw;
+    }
+
+    /* Navbar remains unchanged */
+    .main-h {
+        width: 80%;
+        height: 50px;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .main-h a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
