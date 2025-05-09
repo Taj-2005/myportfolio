@@ -171,20 +171,20 @@ figcaption{
 	color: white;
 	text-align: center;
 	font-size:xx-large;
-	opacity: 80%;
 }
 .refer{
 	position: relative;
 	width: 40vw;
 	height: 25vw;
 	opacity: 80%;
-	transition:opacity 2s,transform 2s;
+	transition:opacity 1s,transform 2s;
 }
 .refer:hover{
 	opacity: 100%;
 	transform: translateY(-2vw);
 	border:1px solid #06b6d4;
 	box-shadow: 1px 1px 100px 1px #06b6d4;
+	transition:opacity 1s,transform 2s;
 
 }
 #homepage3{

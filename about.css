@@ -107,11 +107,11 @@ canvas {
     justify-content: center;
     align-items: center;
     gap: 5vw;
-    height: 100vh;
     padding: 10vh 5vw;
     text-align: center;
     position: relative;
-    z-index: 1; /* Content is above canvas */
+    z-index: 1;
+
 }
 
 /* Keep Navbar Fixed for Mobile */
