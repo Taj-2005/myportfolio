@@ -140,7 +140,6 @@ figcaption{
 	color:white;
 	cursor: pointer;
 	font-size:4em;
-	/* Media Queries */
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	text-align: center;
@@ -150,7 +149,6 @@ figcaption{
 .projects:hover{
 	opacity: 100%;
 	font-size:5em;
-	/* Media Queries */
 	transition: opacity 1s,font-size 1s;
 }
 .description{
@@ -321,51 +319,6 @@ footer:hover{
 	}
   }
 
-  /* @media (min-width: 767px) and (max-width: 1024px) {
-	.name{
-		font-size: 3rem;
-	}
-	.name:hover{
-		font-size: 4rem;
-	}
-	.info{
-		font-size: 1em;
-	}
-	.projects{
-		font-size: 2em;
-	}
-	.projects:hover{
-		font-size: 2.5em;
-	}
-	.description{
-		font-size: 1em;
-	}
-	.refer{
-		width: 80vw;
-		height: 39vw;
-	}
-	.refer:hover{
-		width: 90vw;
-		height: 42vw;
-	}
-	.skills{
-		font-size: 2em;
-	}
-	.skills:hover{
-		font-size: 3em;
-	}
-	.images{
-		width: 10vw;
-		height: 10vw;
-	}
-	.overlap{
-		margin-left: -4vw;
-	}
-	.overlapJ{
-		margin-left: -6vw;
-	}
-
-  } */
 
   canvas {
     position: fixed;
@@ -373,20 +326,19 @@ footer:hover{
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: -1; /* Moves canvas behind everything */
+    z-index: -1;
 }
 
 .main-h {
-    z-index: 2; /* Navbar stays on top */
+    z-index: 2; 
 }
 
 .main {
     position: relative;
-    z-index: 1; /* Ensures content (including form) is above the canvas */
+    z-index: 1; 
 }
 
-/* Ensures form is interactable */
 .visme_d {
     position: relative;
-    z-index: 2; /* Makes sure the form is on top */
+    z-index: 2;
 }
